@@ -6,7 +6,7 @@ services:
     image: satohjohn/kotlin-sample-httpd
     build: ./docker/httpd
     ports:
-      - "80:80"
+      - "9000:80"
   tomcat:
     container_name: tomcat-container
     image: satohjohn/kotlin-sample-tomcat
@@ -14,4 +14,4 @@ services:
     volumes:
       - ./build/libs/app.war:/usr/local/tomcat/webapps/app.war
     expose:
-      - "8009"
+      - "8080"
